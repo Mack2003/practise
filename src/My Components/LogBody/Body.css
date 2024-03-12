@@ -1,0 +1,55 @@
+.course-body{
+    scroll-behavior: smooth;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-snap-align: start;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.course-body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.course-body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* @media screen and (max-width: 555px) {
+    .course-body{
+        height: 94vh;
+    }
+} */
+
+.teacher-banner{
+    height: 100vh;
+    
+   scroll-snap-align: start;
+    background-color: red;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+
+.main-body{
+    position: relative;
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.main-body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.main-body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}

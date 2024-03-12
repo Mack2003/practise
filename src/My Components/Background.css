@@ -1,0 +1,67 @@
+.cross {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.logPeg {
+    box-shadow: 0px 0px 20px 11px rgb(0, 0, 0, .4);
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    min-width: 210px;
+}
+
+.holder {
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    margin-bottom: 10%;
+}
+
+.holder label {
+    display: none;
+    margin-left: 2%;
+    transform: translateY(26px);
+    background-color: white;
+}
+
+.holder input {
+    outline: none;
+    border: 2px solid rgb(27 146 178);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.submitButton {
+    display: grid;
+    place-items: center;
+}
+
+.submitButton button {
+    transition: all .3s ease-in-out;
+    border: none;
+    background-color: aqua;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 20%;
+}
+
+.submitButton button:hover {
+    letter-spacing: 5px;
+
+
+}
+
+.imgHolder img {
+    max-width: 97px;
+}
+
+
+#logDivPop {
+    z-index: 1;
+    display: grid;
+    transition: all .3s ease-in-out;
+    transform: translateY(500px);
+    opacity: 0;
+}

@@ -1,0 +1,134 @@
+.course {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    height: 100%;
+    scroll-snap-align: start;
+    gap: 1rem;
+}
+
+.text-div {
+    /* Your base styles for the div */
+    position: relative;
+    height: fit-content;
+    /* Required for absolute positioning of pseudo-element */
+}
+
+.card-annimation:after {
+    /* Styles for the pseudo-element (simulating the "after-sudo" class) */
+    content: '';
+    /* Required for the pseudo-element */
+    display: block;
+    /* Ensure the pseudo-element is a block-level element */
+    position: absolute;
+    /* Position the pseudo-element absolutely relative to its parent */
+    width: 100%;
+    /* Adjust width as needed */
+    height: 100%;
+    /* Adjust height as needed */
+    z-index: -1;
+    top: .8rem;
+    left: .8rem;
+    border-radius: .5rem;
+    background-color: rgb(9 155 150 / 81%);
+    /* Adjust background color as needed */
+    box-shadow: 0 0 10px 4px #61616170;
+    animation: pageSlideAfter .6s forwards;
+}
+
+.card-annimation::before {
+    /* Styles for the pseudo-element (simulating the "after-sudo" class) */
+    content: '';
+    /* Required for the pseudo-element */
+    display: block;
+    /* Ensure the pseudo-element is a block-level element */
+    position: absolute;
+    /* Position the pseudo-element absolutely relative to its parent */
+    width: 100%;
+    /* Adjust width as needed */
+    height: 100%;
+    /* Adjust height as needed */
+    z-index: -1;
+    top: 1.6rem;
+    left: 1.6rem;
+    border-radius: .5rem;
+    background-color: rgb(139 248 244 / 40%);
+    /* Adjust background color as needed */
+    box-shadow: 0 0 10px 4px #616161;
+    animation: pageSlideBefore .4s forwards;
+}
+
+@keyframes pageSlideBefore {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    100% {
+        top: 1.6rem;
+        left: 1.6rem;
+    }
+}
+
+@keyframes pageSlideAfter {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    100% {
+        top: .8rem;
+        left: .8rem;
+    }
+}
+
+
+.course div img {
+    width: 40vw;
+    max-width: 400px;
+    animation: imageFloat 2.5s infinite;
+}
+
+
+@keyframes imageFloat {
+    0% {
+        transform: translateY(-10px);
+    }
+    
+    50% {
+        transform: translateY(10px);
+    }
+    
+    100% {
+        transform: translateY(-10px);
+    }
+    
+}
+
+.course p {
+    font-weight: bolder;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    padding: 0 1rem;
+    transition: all .2s ease-in-out;
+}
+
+@media screen and (max-width: 560px) {
+    .course {
+        flex-direction: column;
+    }
+
+    .course div img {
+        margin-bottom: 1rem;
+    }
+
+    .course p {
+        font-weight: normal;
+        font-size: .8rem;
+    }
+}
+
+.course-title{
+    color: #8ce015;
+    padding: 1rem 1rem 0 1rem;
+}

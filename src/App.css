@@ -1,0 +1,198 @@
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  padding: 5px 0 0 0;
+  scroll-behavior: smooth;
+  /* background-color: rgb(57, 54, 54); */
+  background: linear-gradient(#52fbc29c, #b552f763), url(https://img.freepik.com/free-vector/abstract-black-shapes-background-design_1017-31904.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul li a {
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.navLink {
+  position: relative;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  height: 2px;
+  width: 100%;
+  left: 1%;
+  background-color: rgb(16, 190, 238);
+  transition: all .2s ease-in-out;
+  transform: scaleX(0);
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+
+}
+
+.nav {
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: transparent;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logInHover {
+  position: fixed;
+  padding: 5px;
+  background-color: white;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-30px);
+  box-shadow: 0 3px 5px rgb(102, 102, 102,.3);
+  border-radius: 5px;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0s 0.3s;
+}
+
+.logInHover ul {
+  padding: 0;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.logInHover ul li a{
+  font-size: 12px;
+  color: black;
+}
+
+.logInHover ul li a:hover{
+  color: rgb(22, 11, 236);
+}
+
+.logIn{
+  margin-right: 5%;
+  z-index: 2;
+}
+
+.logIn button{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #1a6bee;
+  font-weight: bolder;
+}
+
+.logIn:hover .logInHover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0s 0s;
+}
+
+.navMain{
+  border-radius: 1rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.arrow i{
+  color: black;
+  font-weight: bolder;
+  font-size: 1rem;
+}
+
+.arrow{
+  font-weight: bolder;
+  font-size: 25px;
+  padding: 5px 20px;
+  cursor: pointer;
+  color: white;
+}
+
+@media screen and (max-width:560px) {
+  .nav{
+    background-color: white;
+    flex-direction: column;
+    position: fixed;
+    top: 50px;
+    height: 50vh;
+    justify-content: space-evenly;
+    transition:transform .2s ease-in-out ;
+  }
+
+  .nav ul{
+    flex-direction: column;
+  }
+
+  .navLink::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    height: 0;
+    width: 0;
+    left: -1%;
+    background-color: rgb(4, 4, 4);
+    transition: all .2s ease-in-out;
+    transform: scaleX(0);
+  }
+}
+
+.InstituteName{
+  font-weight: bolder;
+  padding: 5px;
+  font-family: cursive;
+  color: #000000;
+}
+
+@media screen and (min-width:560px) {
+  .nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: static;
+    top: 0;
+    height: max-content;
+  }
+  .hideNav{
+    transform: translate(0);
+  }
+  .InstituteName{
+    display: none;
+
+  }
+
+  .arrow{
+    color: black;
+    font-weight: bolder;
+    display: none;
+  }
+
+  .navMain{
+    box-shadow: none;
+  }
+
+
+}
+
+.hideNav{
+  transform: translate(-163px,0);
+}
+
