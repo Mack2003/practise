@@ -5,8 +5,6 @@ import ContextProvider from '../context/ContextProvider'
 export default function Nav(props) {
 
     const data = useContext(ContextProvider)
-
-    console.log(data)
     
     let [list, setList] = useState(false)// List toggelable useState() 
     const [loginPopUp, setLoginPopUp] = useState(false)
